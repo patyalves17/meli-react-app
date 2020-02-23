@@ -1,11 +1,8 @@
 import React from 'react';
+import './Toolbar.scss';
 
 const Toolbar = props => {
-  return (
-    <nav>
-      <input type='text' />
-    </nav>
-  );
+  return <nav className='Toolbar'></nav>;
 };
 
 export default Toolbar;
