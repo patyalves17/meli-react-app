@@ -1,4 +1,36 @@
-$myColor: red;
+@import './../variables.scss';
 
 .Toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $primary;
+  height: 48px;
+
+  &__input {
+    min-width: 320px;
+    max-width: 640px;
+    width: 60vw;
+    padding: 0 58px 0px 8px;
+    font-size: 18px;
+    &:focus,
+    &:active {
+      outline: 0 !important;
+    }
+  }
+  &__button {
+    margin-left: -50px;
+    height: 30px;
+    border: none;
+    background: $neutral-xlight;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    width: 50px;
+
+    &:focus,
+    &:active {
+      outline: 0 !important;
+      background-color: $neutral-light;
+    }
+  }
 }
