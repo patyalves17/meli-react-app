@@ -1,9 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Home from './containers/Home';
 
-function App() {
-  return <div className='App'>Hello</div>;
-}
+const app = props => {
+  return (
+    <div className='App'>
+      <Home></Home>
+    </div>
+  );
+  //  return <Router>toolbar</Router>;
+};
 
-export default App;
+export default app;
