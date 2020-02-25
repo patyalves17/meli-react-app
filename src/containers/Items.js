@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './../components/Card';
+import Breadcrumb from './../components/Breadcrumb';
 
 const Items = props => {
   const [items, setItems] = useState([]);
@@ -21,7 +22,7 @@ const Items = props => {
 
   return (
     <div className='container'>
-      <p>Lista de items</p>
+      <Breadcrumb categories={categories} />
       {items.map(item => {
         return <Card item={item} key={item.id} />;
       })}
