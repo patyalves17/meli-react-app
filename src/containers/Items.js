@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './../components/Card';
 import Breadcrumb from './../components/Breadcrumb';
+import './Items.scss';
 
 const Items = props => {
   const [items, setItems] = useState([]);
@@ -23,9 +24,11 @@ const Items = props => {
   return (
     <div className='container'>
       <Breadcrumb categories={categories} />
-      {items.map(item => {
-        return <Card item={item} key={item.id} />;
-      })}
+      <div className='Items'>
+        {items.map(item => {
+          return <Card item={item} key={item.id} />;
+        })}
+      </div>
     </div>
   );
 };
