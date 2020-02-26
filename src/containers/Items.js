@@ -3,14 +3,22 @@ import axios from 'axios';
 import Card from './../components/Card';
 import Breadcrumb from './../components/Breadcrumb';
 import './Items.scss';
+import { useLocation } from 'react-router-dom';
 
 const Items = props => {
   const [items, setItems] = useState([]);
   const [categories, setCategories] = useState([]);
 
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+
+  let query = useQuery();
+  let search = query.get('search');
+
   useEffect(() => {
     axios
-      .get('http://localhost:3000/items?q=iphone')
+      .get(`http://localhost:3000/items?q=${search}`)
       .then(response => {
         console.log(response);
         setItems(response.data.items);
@@ -19,15 +27,17 @@ const Items = props => {
       .catch(err => {
         console.log(err);
       });
-  }, [1]);
+  }, [search]);
 
   return (
-    <div className='container'>
-      <Breadcrumb categories={categories} />
-      <div className='Items'>
-        {items.map(item => {
-          return <Card item={item} key={item.id} />;
-        })}
+    <div>
+      <div className='container'>
+        <Breadcrumb categories={categories} />
+        <div className='Items'>
+          {items.map(item => {
+            return <Card item={item} key={item.id} />;
+          })}
+        </div>
       </div>
     </div>
   );
