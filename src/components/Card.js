@@ -3,7 +3,7 @@ import './card.scss';
 
 const Card = props => {
   return (
-    <div className='Card'>
+    <div className='Card' onClick={() => props.onClickHandler()}>
       <div className='Card__product'>
         <div className='Card__product__image'>
           <img src={props.item.picture} />

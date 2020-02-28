@@ -16,6 +16,12 @@ const Items = props => {
   let query = useQuery();
   let search = query.get('search');
 
+  const redirectHandler = id => {
+    props.history.push({
+      pathname: `/items/${id}`
+    });
+  };
+
   useEffect(() => {
     axios
       .get(`http://localhost:3000/items?q=${search}`)
@@ -35,7 +41,13 @@ const Items = props => {
         <Breadcrumb categories={categories} />
         <div className='Items'>
           {items.map(item => {
-            return <Card item={item} key={item.id} />;
+            return (
+              <Card
+                item={item}
+                key={item.id}
+                onClickHandler={() => redirectHandler(item.id)}
+              />
+            );
           })}
         </div>
       </div>
