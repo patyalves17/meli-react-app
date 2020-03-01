@@ -12,15 +12,4 @@ function formatter(value, currency) {
   }
 }
 
-function sayHi(user) {
-  alert(`Hello, ${user}!`);
-}
-
-function sayBye(user) {
-  alert(`Bye, ${user}!`);
-}
-
 export { formatter };
-
-// export default { formatter };
-// module.exports = { formatter };
