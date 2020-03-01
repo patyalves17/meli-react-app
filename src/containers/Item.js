@@ -26,17 +26,27 @@ const Item = props => {
     <div className='container'>
       <Breadcrumb categories={[]} />
       <div className='Item'>
-        <div className='Item__image'>
-          <img src={item.picture} alt={item.title} />
-        </div>
-        <div className='Item__infos'>
-          <p className='Item__infos__condition'>
-            {item.condition} - {item.sold_quantity} vendidos
-          </p>
-          <p className='Item__infos__title'>{item.title}</p>
+        <div className='Item__short-description'>
+          <div className='Item__short-description__image'>
+            <img src={item.picture} alt={item.title} />
+          </div>
+          <div className='Item__short-description__infos'>
+            <p className='Item__short-description__infos__condition'>
+              {item.condition} - {item.sold_quantity} vendidos
+            </p>
+            <p className='Item__short-description__infos__title'>
+              {item.title}
+            </p>
 
-          <p className='Item__infos__price'>{priceFormattted}</p>
-          <button className='btn btn__primary'>Comprar</button>
+            <p className='Item__short-description__infos__price'>
+              {priceFormattted}
+            </p>
+            <button className='btn btn__primary'>Comprar</button>
+          </div>
+        </div>
+        <div className='Item__descriptions'>
+          <p className='Item__descriptions__title'>Description</p>
+          <div className='Item__descriptions__text'>{item.description}</div>
         </div>
       </div>
     </div>
