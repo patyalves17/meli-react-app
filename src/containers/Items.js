@@ -18,7 +18,8 @@ const Items = props => {
 
   const redirectHandler = id => {
     props.history.push({
-      pathname: `/items/${id}`
+      pathname: `/items/${id}`,
+      categories: categories
     });
   };
 
