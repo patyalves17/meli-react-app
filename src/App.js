@@ -1,16 +1,17 @@
 import React from 'react';
 import './App.scss';
 import Routes from './routes';
-import Toolbar from './components/Toolbar';
+import Layout from './components/Layout/Layout';
+import { BrowserRouter } from 'react-router-dom';
 
 const app = props => {
   return (
-    <div className='App'>
-      <Toolbar></Toolbar>
-      <Routes></Routes>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Routes></Routes>
+      </Layout>
+    </BrowserRouter>
   );
-  //  return <Router>toolbar</Router>;
 };
 
 export default app;

@@ -23,7 +23,7 @@ const Item = props => {
   priceFormattted = formatter(item.price?.decimals, item.price?.currency);
 
   return (
-    <div className='container'>
+    <div>
       <Breadcrumb categories={[]} />
       <div className='Item'>
         <div className='Item__short-description'>

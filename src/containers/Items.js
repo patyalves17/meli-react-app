@@ -38,19 +38,17 @@ const Items = props => {
 
   return (
     <div>
-      <div className='container'>
-        <Breadcrumb categories={categories} />
-        <div className='Items'>
-          {items.map(item => {
-            return (
-              <Card
-                item={item}
-                key={item.id}
-                onClickHandler={() => redirectHandler(item.id)}
-              />
-            );
-          })}
-        </div>
+      <Breadcrumb categories={categories} />
+      <div className='Items'>
+        {items.map(item => {
+          return (
+            <Card
+              item={item}
+              key={item.id}
+              onClickHandler={() => redirectHandler(item.id)}
+            />
+          );
+        })}
       </div>
     </div>
   );
