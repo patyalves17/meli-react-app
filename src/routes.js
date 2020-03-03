@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './containers/Home';
-import Items from './containers/Items.js';
-import Item from './containers/Item';
+import Items from './containers/Items/Items';
+import Item from './containers/Item/Item';
 
 const Routes = () => (
   <Switch>

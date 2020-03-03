@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Breadcrumb from './../components/Breadcrumb';
+import Breadcrumb from './../../components/Breadcrumb/Breadcrumb';
 import Axios from 'axios';
 import './Item.scss';
-import { formatter } from './../utils';
+import { formatter } from './../../utils';
 
 const Item = props => {
   let priceFormattted = 0;

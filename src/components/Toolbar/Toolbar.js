@@ -28,7 +28,7 @@ const Toolbar = props => {
       <div className='container'>
         <img
           className='Toolbar__logo'
-          src={require('./../assets/Logo_ML.png')}
+          src={require('./../../assets/Logo_ML.png')}
         />
         <div className='Toolbar__search'>
           <form onSubmit={handleSubmit} className='Toolbar__search'>
@@ -40,7 +40,7 @@ const Toolbar = props => {
               onChange={handleChange}
             />
             <button className='Toolbar__search__button' type='submit'>
-              <img src={require('./../assets/ic_Search.png')} />
+              <img src={require('./../../assets/ic_Search.png')} />
             </button>
           </form>
         </div>

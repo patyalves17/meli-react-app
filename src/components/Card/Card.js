@@ -1,9 +1,9 @@
 import React from 'react';
 import './card.scss';
-import { formatter } from './../utils';
+import { formatter } from './../../utils';
 
 const Card = props => {
-  let freeShipping = <img src={require('./../assets/ic_shipping.png')} />;
+  let freeShipping = <img src={require('./../../assets/ic_shipping.png')} />;
   let priceFormattted = 0;
 
   priceFormattted = formatter(

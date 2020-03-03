@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from './../components/Card';
-import Breadcrumb from './../components/Breadcrumb';
+import Card from '../../components/Card/Card';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import './Items.scss';
 import { useLocation } from 'react-router-dom';
 
